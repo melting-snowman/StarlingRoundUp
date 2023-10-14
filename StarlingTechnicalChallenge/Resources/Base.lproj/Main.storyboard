@@ -35,6 +35,9 @@
                             <constraint firstItem="rRw-WM-k7f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o5V-kE-6Ka"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoImage" destination="rRw-WM-k7f" id="iBe-Om-yyH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

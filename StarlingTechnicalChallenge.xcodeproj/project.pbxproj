@@ -94,13 +94,10 @@
 		DE4F2FA42ADAD5A5003F9249 /* StarlingTechnicalChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				DE4F2FA52ADAD5A5003F9249 /* AppDelegate.swift */,
-				DE4F2FA72ADAD5A5003F9249 /* SceneDelegate.swift */,
-				DE4F2FA92ADAD5A5003F9249 /* AccountViewController.swift */,
-				DE4F2FAB2ADAD5A5003F9249 /* Main.storyboard */,
-				DE4F2FAE2ADAD5A6003F9249 /* Assets.xcassets */,
-				DE4F2FB02ADAD5A6003F9249 /* LaunchScreen.storyboard */,
-				DE4F2FB32ADAD5A6003F9249 /* Info.plist */,
+				DE4F2FD62ADAD9ED003F9249 /* AppControl */,
+				DE4F2FD72ADAD9F9003F9249 /* ViewControllers */,
+				DE4F2FD82ADADA03003F9249 /* Network */,
+				DE4F2FD52ADAD9DD003F9249 /* Resources */,
 			);
 			path = StarlingTechnicalChallenge;
 			sourceTree = "<group>";
@@ -111,6 +108,49 @@
 				DE4F2FBC2ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.swift */,
 			);
 			path = StarlingTechnicalChallengeTests;
+			sourceTree = "<group>";
+		};
+		DE4F2FD52ADAD9DD003F9249 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE4F2FAB2ADAD5A5003F9249 /* Main.storyboard */,
+				DE4F2FAE2ADAD5A6003F9249 /* Assets.xcassets */,
+				DE4F2FB02ADAD5A6003F9249 /* LaunchScreen.storyboard */,
+				DE4F2FB32ADAD5A6003F9249 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DE4F2FD62ADAD9ED003F9249 /* AppControl */ = {
+			isa = PBXGroup;
+			children = (
+				DE4F2FA52ADAD5A5003F9249 /* AppDelegate.swift */,
+				DE4F2FA72ADAD5A5003F9249 /* SceneDelegate.swift */,
+			);
+			path = AppControl;
+			sourceTree = "<group>";
+		};
+		DE4F2FD72ADAD9F9003F9249 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE4F2FD92ADADA12003F9249 /* AccountViewController */,
+				DE4F2FA92ADAD5A5003F9249 /* AccountViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DE4F2FD82ADADA03003F9249 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DE4F2FD92ADADA12003F9249 /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccountViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +468,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 89T2QHJW33;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StarlingTechnicalChallenge/Info.plist;
+				INFOPLIST_FILE = StarlingTechnicalChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -456,7 +496,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 89T2QHJW33;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StarlingTechnicalChallenge/Info.plist;
+				INFOPLIST_FILE = StarlingTechnicalChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
