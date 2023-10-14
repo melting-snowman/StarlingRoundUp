@@ -28,6 +28,12 @@
 		DE4F2FF62ADB046D003F9249 /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF52ADB046D003F9249 /* NetworkClientTests.swift */; };
 		DE4F2FF82ADB070E003F9249 /* MockNetworkResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF72ADB070E003F9249 /* MockNetworkResponses.swift */; };
 		DE4F2FFA2ADB0A55003F9249 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF92ADB0A55003F9249 /* NetworkError.swift */; };
+		DE4F2FFC2ADB187D003F9249 /* TransactionListResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FFB2ADB187D003F9249 /* TransactionListResponseDto.swift */; };
+		DE4F2FFE2ADB188F003F9249 /* FeedItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FFD2ADB188F003F9249 /* FeedItemDto.swift */; };
+		DE4F30002ADB18A2003F9249 /* AssociatedFeedRoundUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FFF2ADB18A2003F9249 /* AssociatedFeedRoundUp.swift */; };
+		DE4F30022ADB18B1003F9249 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30012ADB18B1003F9249 /* TransactionStatus.swift */; };
+		DE4F30042ADB18C0003F9249 /* TransactionDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30032ADB18C0003F9249 /* TransactionDirection.swift */; };
+		DE4F30062ADB18CF003F9249 /* TransactionAmountDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30052ADB18CF003F9249 /* TransactionAmountDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		DE4F2FF52ADB046D003F9249 /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
 		DE4F2FF72ADB070E003F9249 /* MockNetworkResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkResponses.swift; sourceTree = "<group>"; };
 		DE4F2FF92ADB0A55003F9249 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DE4F2FFB2ADB187D003F9249 /* TransactionListResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListResponseDto.swift; sourceTree = "<group>"; };
+		DE4F2FFD2ADB188F003F9249 /* FeedItemDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemDto.swift; sourceTree = "<group>"; };
+		DE4F2FFF2ADB18A2003F9249 /* AssociatedFeedRoundUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedFeedRoundUp.swift; sourceTree = "<group>"; };
+		DE4F30012ADB18B1003F9249 /* TransactionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
+		DE4F30032ADB18C0003F9249 /* TransactionDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDirection.swift; sourceTree = "<group>"; };
+		DE4F30052ADB18CF003F9249 /* TransactionAmountDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAmountDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +201,12 @@
 				DE4F2FF32ADAEEA5003F9249 /* AccountCurrencyDto.swift */,
 				DE4F2FEF2ADAEE5D003F9249 /* AccountResponseDto.swift */,
 				DE4F2FF12ADAEE95003F9249 /* AccountTypeDto.swift */,
+				DE4F2FFB2ADB187D003F9249 /* TransactionListResponseDto.swift */,
+				DE4F30012ADB18B1003F9249 /* TransactionStatus.swift */,
+				DE4F2FFD2ADB188F003F9249 /* FeedItemDto.swift */,
+				DE4F30032ADB18C0003F9249 /* TransactionDirection.swift */,
+				DE4F30052ADB18CF003F9249 /* TransactionAmountDto.swift */,
+				DE4F2FFF2ADB18A2003F9249 /* AssociatedFeedRoundUp.swift */,
 			);
 			path = DtoModels;
 			sourceTree = "<group>";
@@ -304,14 +322,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4F2FAA2ADAD5A5003F9249 /* AccountViewController.swift in Sources */,
+				DE4F2FFC2ADB187D003F9249 /* TransactionListResponseDto.swift in Sources */,
 				DE4F2FF22ADAEE95003F9249 /* AccountTypeDto.swift in Sources */,
 				DE4F2FA62ADAD5A5003F9249 /* AppDelegate.swift in Sources */,
+				DE4F30062ADB18CF003F9249 /* TransactionAmountDto.swift in Sources */,
 				DE4F2FF02ADAEE5D003F9249 /* AccountResponseDto.swift in Sources */,
 				DE4F2FA82ADAD5A5003F9249 /* SceneDelegate.swift in Sources */,
+				DE4F30042ADB18C0003F9249 /* TransactionDirection.swift in Sources */,
 				DE4F2FEB2ADAEAA2003F9249 /* GlobalConfig.swift in Sources */,
+				DE4F30002ADB18A2003F9249 /* AssociatedFeedRoundUp.swift in Sources */,
+				DE4F30082ADB1CA2003F9249 /* AccountViewModel.swift in Sources */,
 				DE4F2FE32ADAE48F003F9249 /* Date+Extensions.swift in Sources */,
+				DE4F2FFE2ADB188F003F9249 /* FeedItemDto.swift in Sources */,
 				DE4F2FE72ADAE637003F9249 /* Endpoint.swift in Sources */,
 				DE4F2FE02ADADCC4003F9249 /* NetworkClient.swift in Sources */,
+				DE4F30022ADB18B1003F9249 /* TransactionStatus.swift in Sources */,
 				DE4F2FFA2ADB0A55003F9249 /* NetworkError.swift in Sources */,
 				DE4F2FEE2ADAEE52003F9249 /* AccountDto.swift in Sources */,
 				DE4F2FF42ADAEEA5003F9249 /* AccountCurrencyDto.swift in Sources */,
