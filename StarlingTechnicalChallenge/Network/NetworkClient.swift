@@ -16,7 +16,8 @@ final class NetworkClient {
         self.client = clientInterface
     }
     
-    func getMainAccount(for userToken: String, completionHandler: @escaping ((Result<[AccountDto], NetworkError>) -> Void)) {
+    /// Retrieve accounts for the current user. GlobalConfig token and user ID are used
+    func getAccounts(completionHandler: @escaping ((Result<[AccountDto], NetworkError>) -> Void)) {
         let requestConfiguration = try! RequestConfiguration(path: Endpoint.accounts,
                                                              httpMethod: .get,
                                                              customHeaders: authenticationHeader())
@@ -29,6 +30,7 @@ final class NetworkClient {
             }
         }
     }
+    
     
     private func authenticationHeader() -> [String: String] {
         ["Authorization": "Bearer \(GlobalConfig.userToken)"]

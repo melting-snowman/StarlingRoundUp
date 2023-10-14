@@ -12,13 +12,12 @@ import XCTest
 
 final class NetworkClientTests: XCTestCase {
     
-    // MARK: Get Main Account Tests
+    // MARK: Get Accounts Tests
     func testGetMainAccountRequestFormat() {
-        let testAccountUID = UUID().uuidString
         let network = CheckoutNetworkFakeClient()
         let client = NetworkClient(clientInterface: network)
         
-        client.getMainAccount(for: testAccountUID) { result in
+        client.getAccounts() { result in
             XCTFail("Completion should not get called")
         }
         
@@ -34,12 +33,11 @@ final class NetworkClientTests: XCTestCase {
     }
     
     func testGetMainAccountRequestFailure() {
-        let testAccountUID = UUID().uuidString
         let network = CheckoutNetworkFakeClient()
         let client = NetworkClient(clientInterface: network)
         
         let expect = expectation(description: "Get mock network response")
-        client.getMainAccount(for: testAccountUID) { result in
+        client.getAccounts() { result in
             switch result {
             case .success: XCTFail("Test should fail")
             case .failure(let error):
@@ -55,12 +53,11 @@ final class NetworkClientTests: XCTestCase {
     }
     
     func testGetMainAccountReceivesNoAccounts() {
-        let testAccountUID = UUID().uuidString
         let network = CheckoutNetworkFakeClient()
         let client = NetworkClient(clientInterface: network)
         
         let expect = expectation(description: "Get mock network response")
-        client.getMainAccount(for: testAccountUID) { result in
+        client.getAccounts() { result in
             switch result {
             case .success(let accounts):
                 XCTAssertEqual(accounts.count, 0)
@@ -76,7 +73,6 @@ final class NetworkClientTests: XCTestCase {
     }
     
     func testGetMainAccountReceivesAccounts() {
-        let testAccountUID = UUID().uuidString
         let network = CheckoutNetworkFakeClient()
         let client = NetworkClient(clientInterface: network)
         
@@ -85,7 +81,7 @@ final class NetworkClientTests: XCTestCase {
         ]
         
         let expect = expectation(description: "Get mock network response")
-        client.getMainAccount(for: testAccountUID) { result in
+        client.getAccounts() { result in
             switch result {
             case .success(let accounts):
                 XCTAssertEqual(accounts, responseAccounts)
