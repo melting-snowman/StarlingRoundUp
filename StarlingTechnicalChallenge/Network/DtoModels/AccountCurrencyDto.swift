@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AccountCurrencyDto: String, Decodable {
+enum CurrencyDto: String, Codable, Equatable {
     case usd = "USD"
     case gbp = "GBP"
 }
