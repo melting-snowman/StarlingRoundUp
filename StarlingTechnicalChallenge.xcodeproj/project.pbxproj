@@ -15,10 +15,19 @@
 		DE4F2FB22ADAD5A6003F9249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4F2FB02ADAD5A6003F9249 /* LaunchScreen.storyboard */; };
 		DE4F2FDC2ADADC33003F9249 /* CheckoutNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = DE4F2FDB2ADADC33003F9249 /* CheckoutNetwork */; };
 		DE4F2FDE2ADADC33003F9249 /* CheckoutNetworkFakeClient in Frameworks */ = {isa = PBXBuildFile; productRef = DE4F2FDD2ADADC33003F9249 /* CheckoutNetworkFakeClient */; };
+		DE4F2FE02ADADCC4003F9249 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FDF2ADADCC4003F9249 /* NetworkClient.swift */; };
 		DE4F2FE32ADAE48F003F9249 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FE22ADAE48F003F9249 /* Date+Extensions.swift */; };
 		DE4F2FE52ADAE4FE003F9249 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FE42ADAE4FE003F9249 /* DateExtensionsTests.swift */; };
 		DE4F2FE72ADAE637003F9249 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FE62ADAE637003F9249 /* Endpoint.swift */; };
 		DE4F2FE92ADAE675003F9249 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FE82ADAE675003F9249 /* EndpointTests.swift */; };
+		DE4F2FEB2ADAEAA2003F9249 /* GlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FEA2ADAEAA2003F9249 /* GlobalConfig.swift */; };
+		DE4F2FEE2ADAEE52003F9249 /* AccountDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FED2ADAEE52003F9249 /* AccountDto.swift */; };
+		DE4F2FF02ADAEE5D003F9249 /* AccountResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FEF2ADAEE5D003F9249 /* AccountResponseDto.swift */; };
+		DE4F2FF22ADAEE95003F9249 /* AccountTypeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF12ADAEE95003F9249 /* AccountTypeDto.swift */; };
+		DE4F2FF42ADAEEA5003F9249 /* AccountCurrencyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF32ADAEEA5003F9249 /* AccountCurrencyDto.swift */; };
+		DE4F2FF62ADB046D003F9249 /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF52ADB046D003F9249 /* NetworkClientTests.swift */; };
+		DE4F2FF82ADB070E003F9249 /* MockNetworkResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF72ADB070E003F9249 /* MockNetworkResponses.swift */; };
+		DE4F2FFA2ADB0A55003F9249 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF92ADB0A55003F9249 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +50,19 @@
 		DE4F2FB12ADAD5A6003F9249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE4F2FB32ADAD5A6003F9249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4F2FB82ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarlingTechnicalChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE4F2FDF2ADADCC4003F9249 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		DE4F2FE22ADAE48F003F9249 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		DE4F2FE42ADAE4FE003F9249 /* DateExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
 		DE4F2FE62ADAE637003F9249 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		DE4F2FE82ADAE675003F9249 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		DE4F2FEA2ADAEAA2003F9249 /* GlobalConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConfig.swift; sourceTree = "<group>"; };
+		DE4F2FED2ADAEE52003F9249 /* AccountDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDto.swift; sourceTree = "<group>"; };
+		DE4F2FEF2ADAEE5D003F9249 /* AccountResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountResponseDto.swift; sourceTree = "<group>"; };
+		DE4F2FF12ADAEE95003F9249 /* AccountTypeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTypeDto.swift; sourceTree = "<group>"; };
+		DE4F2FF32ADAEEA5003F9249 /* AccountCurrencyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCurrencyDto.swift; sourceTree = "<group>"; };
+		DE4F2FF52ADB046D003F9249 /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
+		DE4F2FF72ADB070E003F9249 /* MockNetworkResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkResponses.swift; sourceTree = "<group>"; };
+		DE4F2FF92ADB0A55003F9249 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +120,8 @@
 			children = (
 				DE4F2FE42ADAE4FE003F9249 /* DateExtensionsTests.swift */,
 				DE4F2FE82ADAE675003F9249 /* EndpointTests.swift */,
+				DE4F2FF52ADB046D003F9249 /* NetworkClientTests.swift */,
+				DE4F2FF72ADB070E003F9249 /* MockNetworkResponses.swift */,
 			);
 			path = StarlingTechnicalChallengeTests;
 			sourceTree = "<group>";
@@ -122,6 +142,7 @@
 			children = (
 				DE4F2FA52ADAD5A5003F9249 /* AppDelegate.swift */,
 				DE4F2FA72ADAD5A5003F9249 /* SceneDelegate.swift */,
+				DE4F2FEA2ADAEAA2003F9249 /* GlobalConfig.swift */,
 			);
 			path = AppControl;
 			sourceTree = "<group>";
@@ -138,6 +159,9 @@
 		DE4F2FD82ADADA03003F9249 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DE4F2FEC2ADAEE45003F9249 /* DtoModels */,
+				DE4F2FDF2ADADCC4003F9249 /* NetworkClient.swift */,
+				DE4F2FF92ADB0A55003F9249 /* NetworkError.swift */,
 				DE4F2FE62ADAE637003F9249 /* Endpoint.swift */,
 			);
 			path = Network;
@@ -156,6 +180,17 @@
 				DE4F2FE22ADAE48F003F9249 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DE4F2FEC2ADAEE45003F9249 /* DtoModels */ = {
+			isa = PBXGroup;
+			children = (
+				DE4F2FED2ADAEE52003F9249 /* AccountDto.swift */,
+				DE4F2FF32ADAEEA5003F9249 /* AccountCurrencyDto.swift */,
+				DE4F2FEF2ADAEE5D003F9249 /* AccountResponseDto.swift */,
+				DE4F2FF12ADAEE95003F9249 /* AccountTypeDto.swift */,
+			);
+			path = DtoModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,10 +304,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4F2FAA2ADAD5A5003F9249 /* AccountViewController.swift in Sources */,
+				DE4F2FF22ADAEE95003F9249 /* AccountTypeDto.swift in Sources */,
 				DE4F2FA62ADAD5A5003F9249 /* AppDelegate.swift in Sources */,
+				DE4F2FF02ADAEE5D003F9249 /* AccountResponseDto.swift in Sources */,
 				DE4F2FA82ADAD5A5003F9249 /* SceneDelegate.swift in Sources */,
+				DE4F2FEB2ADAEAA2003F9249 /* GlobalConfig.swift in Sources */,
 				DE4F2FE32ADAE48F003F9249 /* Date+Extensions.swift in Sources */,
 				DE4F2FE72ADAE637003F9249 /* Endpoint.swift in Sources */,
+				DE4F2FE02ADADCC4003F9249 /* NetworkClient.swift in Sources */,
+				DE4F2FFA2ADB0A55003F9249 /* NetworkError.swift in Sources */,
+				DE4F2FEE2ADAEE52003F9249 /* AccountDto.swift in Sources */,
+				DE4F2FF42ADAEEA5003F9249 /* AccountCurrencyDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +324,8 @@
 			files = (
 				DE4F2FE92ADAE675003F9249 /* EndpointTests.swift in Sources */,
 				DE4F2FE52ADAE4FE003F9249 /* DateExtensionsTests.swift in Sources */,
+				DE4F2FF62ADB046D003F9249 /* NetworkClientTests.swift in Sources */,
+				DE4F2FF82ADB070E003F9249 /* MockNetworkResponses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
