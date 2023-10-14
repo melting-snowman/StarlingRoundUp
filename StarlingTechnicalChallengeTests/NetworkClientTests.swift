@@ -164,4 +164,72 @@ final class NetworkClientTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
     
+    // MARK: Get Savings Accounts Tests
+    func testGetSavingsAccountsRequestFormat() {
+        let network = CheckoutNetworkFakeClient()
+        let client = NetworkClient(clientInterface: network)
+        
+        let testAccountDto = AccountDto(uid: "asdsdf", type: .primary, defaultCategory: "sbfrge", name: "bdfthre")
+        client.getSavingsAccounts(for: testAccountDto) { result in
+            XCTFail("Completion should not get called")
+        }
+        
+        XCTAssertEqual(network.calledRequests.count, 1)
+        let receivedRequest = network.calledRequests.first?.config.request
+        XCTAssertNotNil(receivedRequest)
+        let expectedURL = Endpoint.savingsGoals(accountUID: testAccountDto.uid).url()
+        XCTAssertEqual(receivedRequest?.url, expectedURL)
+        XCTAssertEqual(receivedRequest?.httpMethod, "GET")
+        XCTAssertNil(receivedRequest?.httpBody)
+        
+        let expectedHeader = ["Authorization": "Bearer \(GlobalConfig.userToken)"]
+        XCTAssertEqual(receivedRequest?.allHTTPHeaderFields, expectedHeader)
+    }
+    
+    func testGetSavingsAccountsFailure() {
+        let network = CheckoutNetworkFakeClient()
+        let client = NetworkClient(clientInterface: network)
+        
+        let expect = expectation(description: "Get mock network response")
+        let testAccountDto = AccountDto(uid: "asdsdf", type: .primary, defaultCategory: "sbfrge", name: "bdfthre")
+        client.getSavingsAccounts(for: testAccountDto) { result in
+            switch result {
+            case .success: XCTFail("Test should fail")
+            case .failure(let error):
+                XCTAssertEqual(error, NetworkError.failed)
+            }
+            expect.fulfill()
+        }
+        let networkCompletion = network.calledRequests.first?.completion as? ((Result<SavingGoalsResponseDto, Error>) -> Void)
+        XCTAssertNotNil(networkCompletion)
+        networkCompletion?(.failure(URLError(.timedOut)))
+        
+        waitForExpectations(timeout: 1)
+    }
+    
+    func testGetSavingsAccountsSuccess() {
+        let network = CheckoutNetworkFakeClient()
+        let client = NetworkClient(clientInterface: network)
+        
+        let responseTransactions = [
+            SavingGoalDto(uid: "segrw", name: "rsegtws", target: .init(currency: .gbp, minorUnits: 32236), totalSaved: .init(currency: .gbp, minorUnits: 32236), savedPercentage: 10, state: .active)
+        ]
+        
+        let expect = expectation(description: "Get mock network response")
+        let testAccountDto = AccountDto(uid: "asdsdf", type: .primary, defaultCategory: "sbfrge", name: "bdfthre")
+        client.getSavingsAccounts(for: testAccountDto) { result in
+            switch result {
+            case .success(let transactions):
+                XCTAssertEqual(transactions, responseTransactions)
+            case .failure: XCTFail("Test expects a success")
+            }
+            expect.fulfill()
+        }
+        let networkCompletion = network.calledRequests.first?.completion as? ((Result<SavingGoalsResponseDto, Error>) -> Void)
+        XCTAssertNotNil(networkCompletion)
+        networkCompletion?(.success(SavingGoalsResponseDto(savingsGoalList: responseTransactions)))
+        
+        waitForExpexctations(timeout: 1)
+    }
+    
 }

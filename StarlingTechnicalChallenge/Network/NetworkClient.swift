@@ -36,6 +36,7 @@ final class NetworkClient: NetworkClientInterface {
         }
     }
     
+    /// Retrieve all the transactions under provided account
     func getTransactions(for account: AccountDto, completionHandler: @escaping ((Result<[FeedItemDto], NetworkError>) -> Void)) {
         let requestConfiguration = try! RequestConfiguration(path: Endpoint.getTransactions(accountUID: account.uid,
                                                                                             categoryUID: account.defaultCategory,
@@ -48,6 +49,21 @@ final class NetworkClient: NetworkClientInterface {
                 completionHandler(.failure(.failed))
             case .success(let response):
                 completionHandler(.success(response.feedItems))
+            }
+        }
+    }
+    
+    /// Retrieve all the savings accounts under the provided account
+    func getSavingsAccounts(for account: AccountDto, completionHandler: @escaping ((Result<[SavingGoalDto], NetworkError>) -> Void)) {
+        let requestConfiguration = try! RequestConfiguration(path: Endpoint.savingsGoals(accountUID: account.uid),
+                                                             httpMethod: .get,
+                                                             customHeaders: authenticationHeader())
+        client.runRequest(with: requestConfiguration) { (response: Result<SavingGoalsResponseDto, Error>) in
+            switch response {
+            case .failure:
+                completionHandler(.failure(.failed))
+            case .success(let response):
+                completionHandler(.success(response.savingsGoalList))
             }
         }
     }

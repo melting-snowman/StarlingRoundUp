@@ -34,6 +34,9 @@
 		DE4F30042ADB18C0003F9249 /* TransactionDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30032ADB18C0003F9249 /* TransactionDirection.swift */; };
 		DE4F30062ADB18CF003F9249 /* TransactionAmountDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30052ADB18CF003F9249 /* TransactionAmountDto.swift */; };
 		DE4F30082ADB1CA2003F9249 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30072ADB1CA2003F9249 /* AccountViewModel.swift */; };
+		DE4F300A2ADB2D2C003F9249 /* SavingGoalsResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30092ADB2D2C003F9249 /* SavingGoalsResponseDto.swift */; };
+		DE4F300D2ADB2D56003F9249 /* SavingGoalDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F300C2ADB2D56003F9249 /* SavingGoalDto.swift */; };
+		DE4F300F2ADB2D67003F9249 /* SavingGoalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F300E2ADB2D67003F9249 /* SavingGoalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		DE4F30032ADB18C0003F9249 /* TransactionDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDirection.swift; sourceTree = "<group>"; };
 		DE4F30052ADB18CF003F9249 /* TransactionAmountDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAmountDto.swift; sourceTree = "<group>"; };
 		DE4F30072ADB1CA2003F9249 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		DE4F30092ADB2D2C003F9249 /* SavingGoalsResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingGoalsResponseDto.swift; sourceTree = "<group>"; };
+		DE4F300C2ADB2D56003F9249 /* SavingGoalDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingGoalDto.swift; sourceTree = "<group>"; };
+		DE4F300E2ADB2D67003F9249 /* SavingGoalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingGoalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,18 +203,29 @@
 		DE4F2FEC2ADAEE45003F9249 /* DtoModels */ = {
 			isa = PBXGroup;
 			children = (
+				DE4F300B2ADB2D3A003F9249 /* HighLevelNetworkResponses */,
 				DE4F2FED2ADAEE52003F9249 /* AccountDto.swift */,
 				DE4F2FF32ADAEEA5003F9249 /* AccountCurrencyDto.swift */,
-				DE4F2FEF2ADAEE5D003F9249 /* AccountResponseDto.swift */,
 				DE4F2FF12ADAEE95003F9249 /* AccountTypeDto.swift */,
-				DE4F2FFB2ADB187D003F9249 /* TransactionListResponseDto.swift */,
 				DE4F30012ADB18B1003F9249 /* TransactionStatus.swift */,
 				DE4F2FFD2ADB188F003F9249 /* FeedItemDto.swift */,
 				DE4F30032ADB18C0003F9249 /* TransactionDirection.swift */,
 				DE4F30052ADB18CF003F9249 /* TransactionAmountDto.swift */,
 				DE4F2FFF2ADB18A2003F9249 /* AssociatedFeedRoundUp.swift */,
+				DE4F300C2ADB2D56003F9249 /* SavingGoalDto.swift */,
+				DE4F300E2ADB2D67003F9249 /* SavingGoalState.swift */,
 			);
 			path = DtoModels;
+			sourceTree = "<group>";
+		};
+		DE4F300B2ADB2D3A003F9249 /* HighLevelNetworkResponses */ = {
+			isa = PBXGroup;
+			children = (
+				DE4F30092ADB2D2C003F9249 /* SavingGoalsResponseDto.swift */,
+				DE4F2FFB2ADB187D003F9249 /* TransactionListResponseDto.swift */,
+				DE4F2FEF2ADAEE5D003F9249 /* AccountResponseDto.swift */,
+			);
+			path = HighLevelNetworkResponses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,17 +346,20 @@
 				DE4F2FF02ADAEE5D003F9249 /* AccountResponseDto.swift in Sources */,
 				DE4F2FA82ADAD5A5003F9249 /* SceneDelegate.swift in Sources */,
 				DE4F30042ADB18C0003F9249 /* TransactionDirection.swift in Sources */,
+				DE4F300F2ADB2D67003F9249 /* SavingGoalState.swift in Sources */,
 				DE4F2FEB2ADAEAA2003F9249 /* GlobalConfig.swift in Sources */,
 				DE4F30002ADB18A2003F9249 /* AssociatedFeedRoundUp.swift in Sources */,
 				DE4F30082ADB1CA2003F9249 /* AccountViewModel.swift in Sources */,
 				DE4F2FE32ADAE48F003F9249 /* Date+Extensions.swift in Sources */,
 				DE4F2FFE2ADB188F003F9249 /* FeedItemDto.swift in Sources */,
 				DE4F2FE72ADAE637003F9249 /* Endpoint.swift in Sources */,
+				DE4F300D2ADB2D56003F9249 /* SavingGoalDto.swift in Sources */,
 				DE4F2FE02ADADCC4003F9249 /* NetworkClient.swift in Sources */,
 				DE4F30022ADB18B1003F9249 /* TransactionStatus.swift in Sources */,
 				DE4F2FFA2ADB0A55003F9249 /* NetworkError.swift in Sources */,
 				DE4F2FEE2ADAEE52003F9249 /* AccountDto.swift in Sources */,
 				DE4F2FF42ADAEEA5003F9249 /* AccountCurrencyDto.swift in Sources */,
+				DE4F300A2ADB2D2C003F9249 /* SavingGoalsResponseDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
