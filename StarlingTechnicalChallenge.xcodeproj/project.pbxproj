@@ -34,6 +34,7 @@
 		DE4F30022ADB18B1003F9249 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30012ADB18B1003F9249 /* TransactionStatus.swift */; };
 		DE4F30042ADB18C0003F9249 /* TransactionDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30032ADB18C0003F9249 /* TransactionDirection.swift */; };
 		DE4F30062ADB18CF003F9249 /* TransactionAmountDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30052ADB18CF003F9249 /* TransactionAmountDto.swift */; };
+		DE4F30082ADB1CA2003F9249 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F30072ADB1CA2003F9249 /* AccountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		DE4F30012ADB18B1003F9249 /* TransactionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
 		DE4F30032ADB18C0003F9249 /* TransactionDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDirection.swift; sourceTree = "<group>"; };
 		DE4F30052ADB18CF003F9249 /* TransactionAmountDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAmountDto.swift; sourceTree = "<group>"; };
+		DE4F30072ADB1CA2003F9249 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				DE4F2FD92ADADA12003F9249 /* AccountViewController */,
 				DE4F2FA92ADAD5A5003F9249 /* AccountViewController.swift */,
+				DE4F30072ADB1CA2003F9249 /* AccountViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

@@ -8,7 +8,12 @@
 import Foundation
 import CheckoutNetwork
 
-final class NetworkClient {
+protocol NetworkClientInterface {
+    func getAccounts(completionHandler: @escaping ((Result<[AccountDto], NetworkError>) -> Void))
+    func getTransactions(for account: AccountDto, completionHandler: @escaping ((Result<[FeedItemDto], NetworkError>) -> Void))
+}
+
+final class NetworkClient: NetworkClientInterface {
     
     private let client: CheckoutClientInterface
     

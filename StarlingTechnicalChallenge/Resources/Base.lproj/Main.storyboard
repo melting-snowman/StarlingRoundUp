@@ -24,19 +24,50 @@
                                     <constraint firstAttribute="height" priority="750" constant="300" id="fYV-A2-vPA"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tkF-kG-h8G">
+                                <rect key="frame" x="159" y="401.66666666666669" width="75" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nah-RF-GpK">
+                                        <rect key="frame" x="19.000000000000004" y="0.0" width="37.333333333333343" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA8-zj-P1o">
+                                        <rect key="frame" x="0.0" y="30" width="75" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="3Fm-n3-02H"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="moveRoundUpToSavings" destination="BYZ-38-t0r" eventType="touchUpInside" id="QvR-yO-Bor"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rRw-WM-k7f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="05k-PS-Dfo"/>
+                            <constraint firstItem="tkF-kG-h8G" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2DG-Bf-YpC"/>
+                            <constraint firstItem="tkF-kG-h8G" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="57G-SD-F5R"/>
+                            <constraint firstItem="tkF-kG-h8G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jr2-oN-4AR"/>
+                            <constraint firstItem="tkF-kG-h8G" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R6l-9I-eaM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tkF-kG-h8G" secondAttribute="trailing" id="USC-Lc-wqS"/>
                             <constraint firstItem="rRw-WM-k7f" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Uwz-CX-GY4"/>
                             <constraint firstItem="rRw-WM-k7f" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X6V-t3-Drs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tkF-kG-h8G" secondAttribute="bottom" id="gJN-to-ugF"/>
                             <constraint firstItem="rRw-WM-k7f" firstAttribute="width" secondItem="rRw-WM-k7f" secondAttribute="height" id="kXR-aI-Lpe"/>
                             <constraint firstItem="rRw-WM-k7f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o5V-kE-6Ka"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="logoImage" destination="rRw-WM-k7f" id="iBe-Om-yyH"/>
+                        <outlet property="roundUpAmountLabel" destination="Nah-RF-GpK" id="K6E-EF-T5G"/>
+                        <outlet property="roundUpContentView" destination="tkF-kG-h8G" id="zw3-g8-Kbc"/>
+                        <outlet property="transferRoundUpButton" destination="FA8-zj-P1o" id="iWR-Gu-tia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
