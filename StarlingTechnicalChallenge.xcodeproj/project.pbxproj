@@ -14,17 +14,12 @@
 		DE4F2FAF2ADAD5A6003F9249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE4F2FAE2ADAD5A6003F9249 /* Assets.xcassets */; };
 		DE4F2FB22ADAD5A6003F9249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4F2FB02ADAD5A6003F9249 /* LaunchScreen.storyboard */; };
 		DE4F2FBD2ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FBC2ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.swift */; };
+		DE4F2FDC2ADADC33003F9249 /* CheckoutNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = DE4F2FDB2ADADC33003F9249 /* CheckoutNetwork */; };
+		DE4F2FDE2ADADC33003F9249 /* CheckoutNetworkFakeClient in Frameworks */ = {isa = PBXBuildFile; productRef = DE4F2FDD2ADADC33003F9249 /* CheckoutNetworkFakeClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DE4F2FB92ADAD5A6003F9249 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE4F2F9A2ADAD5A5003F9249 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE4F2FA12ADAD5A5003F9249;
-			remoteInfo = StarlingTechnicalChallenge;
-		};
-		DE4F2FC32ADAD5A6003F9249 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE4F2F9A2ADAD5A5003F9249 /* Project object */;
 			proxyType = 1;
@@ -44,7 +39,6 @@
 		DE4F2FB32ADAD5A6003F9249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4F2FB82ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarlingTechnicalChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4F2FBC2ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarlingTechnicalChallengeTests.swift; sourceTree = "<group>"; };
-		DE4F2FC22ADAD5A6003F9249 /* StarlingTechnicalChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarlingTechnicalChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4F2FDC2ADADC33003F9249 /* CheckoutNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,13 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE4F2FBF2ADAD5A6003F9249 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				DE4F2FDE2ADADC33003F9249 /* CheckoutNetworkFakeClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +75,6 @@
 			children = (
 				DE4F2FA22ADAD5A5003F9249 /* StarlingTechnicalChallenge.app */,
 				DE4F2FB82ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.xctest */,
-				DE4F2FC22ADAD5A6003F9249 /* StarlingTechnicalChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +157,9 @@
 			dependencies = (
 			);
 			name = StarlingTechnicalChallenge;
+			packageProductDependencies = (
+				DE4F2FDB2ADADC33003F9249 /* CheckoutNetwork */,
+			);
 			productName = StarlingTechnicalChallenge;
 			productReference = DE4F2FA22ADAD5A5003F9249 /* StarlingTechnicalChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -187,27 +178,12 @@
 				DE4F2FBA2ADAD5A6003F9249 /* PBXTargetDependency */,
 			);
 			name = StarlingTechnicalChallengeTests;
+			packageProductDependencies = (
+				DE4F2FDD2ADADC33003F9249 /* CheckoutNetworkFakeClient */,
+			);
 			productName = StarlingTechnicalChallengeTests;
 			productReference = DE4F2FB82ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DE4F2FC12ADAD5A6003F9249 /* StarlingTechnicalChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE4F2FD22ADAD5A6003F9249 /* Build configuration list for PBXNativeTarget "StarlingTechnicalChallengeUITests" */;
-			buildPhases = (
-				DE4F2FBE2ADAD5A6003F9249 /* Sources */,
-				DE4F2FBF2ADAD5A6003F9249 /* Frameworks */,
-				DE4F2FC02ADAD5A6003F9249 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE4F2FC42ADAD5A6003F9249 /* PBXTargetDependency */,
-			);
-			name = StarlingTechnicalChallengeUITests;
-			productName = StarlingTechnicalChallengeUITests;
-			productReference = DE4F2FC22ADAD5A6003F9249 /* StarlingTechnicalChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -226,10 +202,6 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = DE4F2FA12ADAD5A5003F9249;
 					};
-					DE4F2FC12ADAD5A6003F9249 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = DE4F2FA12ADAD5A5003F9249;
-					};
 				};
 			};
 			buildConfigurationList = DE4F2F9D2ADAD5A5003F9249 /* Build configuration list for PBXProject "StarlingTechnicalChallenge" */;
@@ -241,13 +213,15 @@
 				Base,
 			);
 			mainGroup = DE4F2F992ADAD5A5003F9249;
+			packageReferences = (
+				DE4F2FDA2ADADC33003F9249 /* XCRemoteSwiftPackageReference "NetworkClient-iOS" */,
+			);
 			productRefGroup = DE4F2FA32ADAD5A5003F9249 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DE4F2FA12ADAD5A5003F9249 /* StarlingTechnicalChallenge */,
 				DE4F2FB72ADAD5A6003F9249 /* StarlingTechnicalChallengeTests */,
-				DE4F2FC12ADAD5A6003F9249 /* StarlingTechnicalChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,13 +238,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE4F2FB62ADAD5A6003F9249 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE4F2FC02ADAD5A6003F9249 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,13 +265,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE4F2FBE2ADAD5A6003F9249 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -312,11 +272,6 @@
 			isa = PBXTargetDependency;
 			target = DE4F2FA12ADAD5A5003F9249 /* StarlingTechnicalChallenge */;
 			targetProxy = DE4F2FB92ADAD5A6003F9249 /* PBXContainerItemProxy */;
-		};
-		DE4F2FC42ADAD5A6003F9249 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE4F2FA12ADAD5A5003F9249 /* StarlingTechnicalChallenge */;
-			targetProxy = DE4F2FC32ADAD5A6003F9249 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -555,42 +510,6 @@
 			};
 			name = Release;
 		};
-		DE4F2FD32ADAD5A6003F9249 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 89T2QHJW33;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iojayang.StarlingTechnicalChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StarlingTechnicalChallenge;
-			};
-			name = Debug;
-		};
-		DE4F2FD42ADAD5A6003F9249 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 89T2QHJW33;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iojayang.StarlingTechnicalChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StarlingTechnicalChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -621,16 +540,31 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE4F2FD22ADAD5A6003F9249 /* Build configuration list for PBXNativeTarget "StarlingTechnicalChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE4F2FD32ADAD5A6003F9249 /* Debug */,
-				DE4F2FD42ADAD5A6003F9249 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE4F2FDA2ADADC33003F9249 /* XCRemoteSwiftPackageReference "NetworkClient-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:checkout/NetworkClient-iOS.git";
+			requirement = {
+				kind = revision;
+				revision = 0fb9a8653fb63bf1fc44c7a4510dd69b69482300;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE4F2FDB2ADADC33003F9249 /* CheckoutNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE4F2FDA2ADADC33003F9249 /* XCRemoteSwiftPackageReference "NetworkClient-iOS" */;
+			productName = CheckoutNetwork;
+		};
+		DE4F2FDD2ADADC33003F9249 /* CheckoutNetworkFakeClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE4F2FDA2ADADC33003F9249 /* XCRemoteSwiftPackageReference "NetworkClient-iOS" */;
+			productName = CheckoutNetworkFakeClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE4F2F9A2ADAD5A5003F9249 /* Project object */;
 }
