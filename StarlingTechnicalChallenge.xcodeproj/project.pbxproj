@@ -26,7 +26,6 @@
 		DE4F2FF22ADAEE95003F9249 /* AccountTypeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF12ADAEE95003F9249 /* AccountTypeDto.swift */; };
 		DE4F2FF42ADAEEA5003F9249 /* AccountCurrencyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF32ADAEEA5003F9249 /* AccountCurrencyDto.swift */; };
 		DE4F2FF62ADB046D003F9249 /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF52ADB046D003F9249 /* NetworkClientTests.swift */; };
-		DE4F2FF82ADB070E003F9249 /* MockNetworkResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF72ADB070E003F9249 /* MockNetworkResponses.swift */; };
 		DE4F2FFA2ADB0A55003F9249 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FF92ADB0A55003F9249 /* NetworkError.swift */; };
 		DE4F2FFC2ADB187D003F9249 /* TransactionListResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FFB2ADB187D003F9249 /* TransactionListResponseDto.swift */; };
 		DE4F2FFE2ADB188F003F9249 /* FeedItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FFD2ADB188F003F9249 /* FeedItemDto.swift */; };
@@ -68,7 +67,6 @@
 		DE4F2FF12ADAEE95003F9249 /* AccountTypeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTypeDto.swift; sourceTree = "<group>"; };
 		DE4F2FF32ADAEEA5003F9249 /* AccountCurrencyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCurrencyDto.swift; sourceTree = "<group>"; };
 		DE4F2FF52ADB046D003F9249 /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
-		DE4F2FF72ADB070E003F9249 /* MockNetworkResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkResponses.swift; sourceTree = "<group>"; };
 		DE4F2FF92ADB0A55003F9249 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DE4F2FFB2ADB187D003F9249 /* TransactionListResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListResponseDto.swift; sourceTree = "<group>"; };
 		DE4F2FFD2ADB188F003F9249 /* FeedItemDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemDto.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				DE4F2FE42ADAE4FE003F9249 /* DateExtensionsTests.swift */,
 				DE4F2FE82ADAE675003F9249 /* EndpointTests.swift */,
 				DE4F2FF52ADB046D003F9249 /* NetworkClientTests.swift */,
-				DE4F2FF72ADB070E003F9249 /* MockNetworkResponses.swift */,
 			);
 			path = StarlingTechnicalChallengeTests;
 			sourceTree = "<group>";
@@ -353,7 +350,6 @@
 				DE4F2FE92ADAE675003F9249 /* EndpointTests.swift in Sources */,
 				DE4F2FE52ADAE4FE003F9249 /* DateExtensionsTests.swift in Sources */,
 				DE4F2FF62ADB046D003F9249 /* NetworkClientTests.swift in Sources */,
-				DE4F2FF82ADB070E003F9249 /* MockNetworkResponses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
