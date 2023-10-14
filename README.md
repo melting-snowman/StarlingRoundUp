@@ -1,10 +1,6 @@
 # Alex Ioja-Yang
-take home task for Starling
-
-***
-
-# StarlingRoundUp
-Coding task from Starling
+**Take Home Task for Starling**\
+*please do not take note of the timestamps of the commits, the task was done on a Saturday, navigating between diagramming, coding, tennis, family, etc...* 
 
 ***
 
@@ -12,8 +8,10 @@ Coding task from Starling
 ## Contents
 - [The Challenge](#The-Challenge): Context for the requirements
 - [What to build](#What-to-build): What solution should look like
-- [Solution](#Solution): Documentation on solution
-
+- [Solution](#Solution): Presenting the solution and different caveats 
+    - [Flows](#Flows)
+    - [Testing](#Testing)
+    - [Running it locally](#Run-It-Yourself)
 
 *** 
 
@@ -43,14 +41,29 @@ To make this work, the key parts from our public API you will need are:\
 We do expect to see your working here: please do not use any of the libraries out there
 which provide an sdk for interacting with our api.
 
-### What to build:\
+### What to build:
 ● **iOS**: Simple iOS application written in Swift and using UIKit. It should display the
 amount to round up for a week of transactions
 
 *** 
 
-## Sollution
+## Solution
+The application was made using Xcode 15.0. Whilst the application minimum version is iOS 16, this should easily be reduced to older versions. I have developed it with default Xcode config, and now it used some URL syntax that is only iOS 16+. URL handling is not exactly magical, but as I write this ReadMe, it is too late to go back and change it all around. I trust the simplicity of the change would be apparent and would be happy to discuss on a pair programming session.\
+There is 1 external dependency for a generic network client. That network client was developed by myself previously and enables a structured approach to building network calls, whilst enabling very good testability. I chose to use it as it saves me a few hours and from rebuilding something I already rebuilt for commercial use.\
+The work was approached by building from the network first, creating endpoint structures and testing them, then moving towards the ViewModel and the ViewController.\
+Hardcoding credentials inside `GlobalConfig` is chosen on this ocasion due to the project being a take home task and not intended for commercial use. That should not normally be acceptable and it can compromise the application security.
 
+### Flows
+The following diagram takes the observer though the flows of the application. The application actually stops at "Process latest SavingsGoals" within the ViewModel. The take home project requirement does not appear to require persisting the state on backend of the transfer, and whilst looking into it, many other challenges are appearing in regards to the behaviour.
 <div align="center">
-    <img width=40% src="https://github.com/melting-snowman/StarlingRoundUp/blob/main/Documentation/ActionFlow.jpg">
+    <img width=100% src="https://github.com/melting-snowman/StarlingRoundUp/blob/main/Documentation/ActionFlow.jpg">
 </div>
+
+### Testing
+`NetworkClient`, `Endpoint` & `DateExtension` are fully unit tested. Other types of testing have not been deployed (snapshot, UI, etc)
+There is no test done on the ViewModel. Due to lack of time I have not tested it, but I did create a protocol over `NetworkClient` which would allow the testing of the ViewModel without actually mocking it. It is possible to break it down further in order to better encapsulate and test business logic, but for the purpose of this take home test I considered the current version to show a good working prototype.
+
+### Run It Yourself
+After fetching the codebase locally you should setup the user. As the application does not have an authentication mechanism, you will need to assign a `userToken` and an associated `accountHolderUID` inside `GlobalConfig.swift`.
+
+***
