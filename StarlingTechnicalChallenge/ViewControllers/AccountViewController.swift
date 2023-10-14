@@ -34,7 +34,7 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction private func moveRoundUpToSavings() {
-        
+        viewModel.startMovingRoundUp()
     }
 
     // Simple animation if loading takes longer, transitioning smoothly from Start Screen
@@ -42,7 +42,7 @@ class AccountViewController: UIViewController {
         UIView.animate(withDuration: Constants.animationCycle) { [weak self] in
             self?.logoImage.transform = scaleDown ? CGAffineTransform(scaleX: 0.01, y: 0.01) : .identity
         } completion: { [weak self] completed in
-            guard self?.viewModel.isLoading == true else {
+            guard self?.roundUpContentView.isHidden == true else {
                 self?.logoImage.isHidden = true
                 return
             }
@@ -61,6 +61,13 @@ class AccountViewController: UIViewController {
 
 extension AccountViewController: AccountViewModelDelegate {
     
+    func showLoadingScreen() {
+        logoImage.isHidden = false
+        roundUpContentView.isHidden = true
+        
+        animateCycle(scaleDown: true)
+    }
+    
     func receivedRoundUp(_ roundUpAmount: Int) {
         let attributedString = NSMutableAttributedString(string: "Great news!\nYou can now add\n")
         let boldString = NSMutableAttributedString(string: "\(roundUpAmount)",
@@ -73,4 +80,28 @@ extension AccountViewController: AccountViewModelDelegate {
         roundUpContentView.isHidden = false
     }
     
+    func receivedOutcome(_ outcome: AccountViewModelOutcome) {
+        let title = "Thank you for joining us on this experience"
+        let message: String
+        switch outcome {
+        case .noConfiguredSavingAccount:
+            message = "We have found you currently do not have a Savings Goal setup. Our app doesn't currently support setting up saving goals, so please use our website temporarily to create one. We apologise for the inconvenience"
+        case .transferInTheNextVersion:
+            message = "You do have Savings Goals setup and we can't wait to help you save and achieve our dreams. Unfortunately in this version we haven't quite been ready to enable transfers via the app. Keep an eye on our next version"
+        }
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        let restartAction = UIAlertAction(title: "Restart", style: .cancel) { [weak self] _ in
+            alertController.dismiss(animated: true)
+            self?.viewModel.retrieveRoundUpAmount()
+        }
+        alertController.addAction(restartAction)
+        let quitAction = UIAlertAction(title: "Quit", style: .destructive) { _ in
+            fatalError("Sorry, you asked for it :/. Rest assured that before Production we would invest more time and avoid ending this way")
+        }
+        alertController.addAction(quitAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true)
+        }
+    }
 }

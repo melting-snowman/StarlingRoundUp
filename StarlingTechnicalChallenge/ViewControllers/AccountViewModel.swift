@@ -8,7 +8,15 @@
 import Foundation
 
 protocol AccountViewModelDelegate: AnyObject {
+    func showLoadingScreen()
     func receivedRoundUp(_ roundUpAmount: Int)
+    func receivedOutcome(_ outcome: AccountViewModelOutcome)
+}
+
+// TODO: Temporary limitation outcome informing user of limitations with outcome
+enum AccountViewModelOutcome {
+    case noConfiguredSavingAccount
+    case transferInTheNextVersion
 }
 
 // TODO: Test!! We can test via injecting a FakeNetworkClient and adding preset network responses !!!
@@ -16,9 +24,8 @@ final class AccountViewModel {
  
     var delegate: AccountViewModelDelegate?
     
-    private(set) var isLoading = false
-    
     private var roundUpAmount: Int = 0
+    private var focussedAccount: AccountDto?
     private let networkClient: NetworkClientInterface
     
     init(networkClient: NetworkClientInterface = NetworkClient()) {
@@ -27,7 +34,6 @@ final class AccountViewModel {
     
     /// Will retrieve the accounts for the user, followed by the transactions for the main account, ending with calculating the RoundUp and using delegate to pass value back
     func retrieveRoundUpAmount() {
-        isLoading = true
         networkClient.getAccounts { [weak self] result in
             switch result {
             case .success(let accounts):
@@ -45,7 +51,29 @@ final class AccountViewModel {
         }
     }
     
+    func startMovingRoundUp() {
+        guard let focussedAccount else { return }
+        delegate?.showLoadingScreen()
+        networkClient.getSavingsAccounts(for: focussedAccount) { [weak self] result in
+            switch result {
+            case .success(let savingsAccounts):
+                if savingsAccounts.isEmpty {
+                    // TODO: Handle creating a savings goal, then using it
+                    self?.delegate?.receivedOutcome(.noConfiguredSavingAccount)
+                    return
+                }
+                // TODO: Detect active & unfulfilled savings accounts! If multiple options are present ask user to select destination
+                // Business logic may be complex as there are many aspects to account (space left to fill, is it full, state, etc)
+                self?.delegate?.receivedOutcome(.transferInTheNextVersion)
+            case .failure:
+                // TODO: Handle failure. Nothing being covered at the moment
+                break
+            }
+        }
+    }
+    
     private func retrieveTransactions(for account: AccountDto) {
+        self.focussedAccount = account
         networkClient.getTransactions(for: account) { [weak self] result in
             switch result {
             case .success(let transactions):
