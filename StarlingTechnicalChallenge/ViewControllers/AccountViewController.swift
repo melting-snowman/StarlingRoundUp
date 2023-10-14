@@ -15,13 +15,13 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         
         
-        UIView.animate(withDuration: 5) {
+        UIView.animate(withDuration: 3) {
             self.logoImage.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
         } completion: { completed in
             guard completed else { return }
             self.logoImage.isHidden = true
         }
-        // Do any additional setup after loading the view.
+        
     }
 
 
