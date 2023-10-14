@@ -15,6 +15,10 @@
 		DE4F2FB22ADAD5A6003F9249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4F2FB02ADAD5A6003F9249 /* LaunchScreen.storyboard */; };
 		DE4F2FDC2ADADC33003F9249 /* CheckoutNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = DE4F2FDB2ADADC33003F9249 /* CheckoutNetwork */; };
 		DE4F2FDE2ADADC33003F9249 /* CheckoutNetworkFakeClient in Frameworks */ = {isa = PBXBuildFile; productRef = DE4F2FDD2ADADC33003F9249 /* CheckoutNetworkFakeClient */; };
+		DE4F2FE32ADAE48F003F9249 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FE22ADAE48F003F9249 /* Date+Extensions.swift */; };
+		DE4F2FE52ADAE4FE003F9249 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FE42ADAE4FE003F9249 /* DateExtensionsTests.swift */; };
+		DE4F2FE72ADAE637003F9249 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FE62ADAE637003F9249 /* Endpoint.swift */; };
+		DE4F2FE92ADAE675003F9249 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F2FE82ADAE675003F9249 /* EndpointTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,10 @@
 		DE4F2FB12ADAD5A6003F9249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE4F2FB32ADAD5A6003F9249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4F2FB82ADAD5A6003F9249 /* StarlingTechnicalChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarlingTechnicalChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE4F2FE22ADAE48F003F9249 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		DE4F2FE42ADAE4FE003F9249 /* DateExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
+		DE4F2FE62ADAE637003F9249 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DE4F2FE82ADAE675003F9249 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 				DE4F2FD62ADAD9ED003F9249 /* AppControl */,
 				DE4F2FD72ADAD9F9003F9249 /* ViewControllers */,
 				DE4F2FD82ADADA03003F9249 /* Network */,
+				DE4F2FE12ADAE480003F9249 /* Extensions */,
 				DE4F2FD52ADAD9DD003F9249 /* Resources */,
 			);
 			path = StarlingTechnicalChallenge;
@@ -91,6 +100,8 @@
 		DE4F2FBB2ADAD5A6003F9249 /* StarlingTechnicalChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE4F2FE42ADAE4FE003F9249 /* DateExtensionsTests.swift */,
+				DE4F2FE82ADAE675003F9249 /* EndpointTests.swift */,
 			);
 			path = StarlingTechnicalChallengeTests;
 			sourceTree = "<group>";
@@ -127,6 +138,7 @@
 		DE4F2FD82ADADA03003F9249 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DE4F2FE62ADAE637003F9249 /* Endpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -136,6 +148,14 @@
 			children = (
 			);
 			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		DE4F2FE12ADAE480003F9249 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE4F2FE22ADAE48F003F9249 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +271,8 @@
 				DE4F2FAA2ADAD5A5003F9249 /* AccountViewController.swift in Sources */,
 				DE4F2FA62ADAD5A5003F9249 /* AppDelegate.swift in Sources */,
 				DE4F2FA82ADAD5A5003F9249 /* SceneDelegate.swift in Sources */,
+				DE4F2FE32ADAE48F003F9249 /* Date+Extensions.swift in Sources */,
+				DE4F2FE72ADAE637003F9249 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4F2FE92ADAE675003F9249 /* EndpointTests.swift in Sources */,
+				DE4F2FE52ADAE4FE003F9249 /* DateExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
