@@ -1,9 +1,3 @@
-# Alex Ioja-Yang
-**Take Home Task for Starling**\
-*please do not take note of the timestamps of the commits, the task was done on a Saturday, navigating between diagramming, coding, tennis, family, etc...* 
-
-***
-
 
 ## Contents
 - [The Challenge](#The-Challenge): Context for the requirements
